@@ -8,6 +8,8 @@
 //
 // This program requires the UTFT library.
 // files.banggood.com/2016/06/3.2inch_Arduino_Mega2560_ILI9481_V1.0.zip
+// https://www.youtube.com/watch?v=GP5of6CtH68
+
 
 #include <UTFT.h>
 
@@ -36,9 +38,10 @@ void setup()
 {
   myGLCD.InitLCD();
   myGLCD.clrScr();
+  myGLCD.fillScr(255,255,255);
 
   myGLCD.setColor(225, 0, 225); 
-  myGLCD.setBackColor(0, 0, 0);
+  myGLCD.setBackColor(255, 255, 255);
   myGLCD.setFont(BigFont);
   myGLCD.print("Kurt Barcelona", CENTER, 32);
   myGLCD.setFont(SmallFont);
@@ -49,7 +52,7 @@ void loop()
 {
   //myGLCD.clrScr();
   myGLCD.setColor(0, 225, 150); 
-  myGLCD.setBackColor(0, 0, 0);
+  myGLCD.setBackColor(255, 255, 255);
   myGLCD.setFont(SevenSegNumFont);
   /*
   myGLCD.print(" !\"#$%&'()*+,-./", CENTER, 0);
@@ -67,7 +70,7 @@ void loop()
 
   myGLCD.print(String(i), CENTER, 130);
   i=i+1;
-  delay(100);
-  //while(1) {};
+  // delay();
+  // while(1) {};
 }
 
